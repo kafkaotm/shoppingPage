@@ -1,0 +1,102 @@
+html,
+body {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: #30373f;
+  font-family: 微軟正黑體, "Microsoft JhengHei", 蘋方;
+}
+
+#app {
+  display: inline;
+  padding: 20px;
+  background-color: #363f46;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 62px 3px #242424;
+}
+.itemPic {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background-image: url(https://yijiefood.com.tw/wp-content/uploads/2017/08/%E8%BE%A3%E6%A4%92%E9%86%AC.jpg);
+  background-size: contain;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.btns {
+  display: block;
+  float: right;
+  margin-left: 10px;
+  width: 200px;
+}
+
+.block {
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: #999 solid 1px;
+  margin-top: 20px;
+}
+
+.btnBuy {
+  cursor: pointer;
+  background-color: #d22c3f;
+  border: none;
+  &:hover {
+    background-color: #ee5163;
+  }
+}
+
+.green {
+  border: green solid 3px;
+}
+
+.orange {
+  border: orange solid 3px;
+}
+
+.gray {
+  border: gray solid 3px;
+}
+
+.modal {
+  position: fixed;
+  width: 300px;
+  background-color: #eee;
+  color: #363f46;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 0px 62px -3px #242424;
+  border-radius: 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+.btnClose {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.btnM {
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+}
+
+.btnA {
+  position: absolute;
+  right: 15px;
+  bottom: 40px;
+}
+
+.none {
+  display: none;
+}

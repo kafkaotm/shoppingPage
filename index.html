@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="itemPic"></div>
+      <div class="btns">
+        <div class="preorder" v-show="preorder">
+          預購數量：{{ preorderConfirm }}
+        </div>
+        <div class="block" :class="btnColor">倒數時間：{{ sec }}秒</div>
+        <div class="block">辣狂辣椒醬</div>
+        <div class="block">剩餘數量：{{ amount }}</div>
+        <div
+          class="block btnBuy"
+          v-if="buy==='購買' || buy==='預購'"
+          @click="noModal=false"
+        >
+          {{ buyStatus }}
+        </div>
+        <div class="block" v-else>停售</div>
+      </div>
+      <div class="modal" :class="{none:noModal}">
+        <button class="btnClose" @click="noModal=true">X</button>
+        <h3>我要{{ buy }}</h3>
+        <br />
+        <h2 v-if="preorder">{{ preorderAmount }}罐</h2>
+        <h2 v-else>{{ buyAmount }}罐</h2>
+        <button class="btnM" @click="btnM">-</button>
+        <button class="btnA" @click="btnA">+</button>
+        <button @click="calBuy">確定</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="shopping.js"></script>
+  </body>
+</html>
